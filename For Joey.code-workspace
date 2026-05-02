@@ -1,0 +1,58 @@
+{
+  "folders": [
+    {
+      "name": "(For Joey) App",
+      "path": "app"
+    },
+    {
+      "name": "(For Joey) UI",
+      "path": "app/src/components/ui"
+    },
+    {
+      "name": "(For Joey) Pages",
+      "path": "app/src/pages"
+    }
+  ],
+  "settings": {
+    "explorer.compactFolders": false
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "bun: install & dev",
+        "type": "shell",
+        "command": "bun install && bun run dev",
+        "options": {
+          "cwd": "${workspaceFolder:(For Joey) App}"
+        },
+        "isBackground": true,
+        "problemMatcher": {
+          "owner": "vite",
+          "pattern": { "regexp": "." },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "VITE",
+            "endsPattern": "Local:"
+          }
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        }
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Install & Start Dev Server",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "bun install && bun run dev",
+        "cwd": "${workspaceFolder:(For Joey) App}"
+      }
+    ]
+  }
+}
