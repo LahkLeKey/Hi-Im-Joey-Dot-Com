@@ -182,3 +182,79 @@
     border-right-color: var(--border);
   }
 }
+
+.lesson-shell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.lesson-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-code-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.lesson-code-chrome {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  color: var(--text-muted, var(--muted-foreground));
+  background: color-mix(in oklab, var(--background) 88%, var(--accent));
+}
+
+.lesson-code-file {
+  font-weight: 600;
+}
+
+.lesson-code-language {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lesson-code-block {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 90%, black 8%);
+  color: var(--foreground);
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.lesson-code-block code {
+  display: block;
+  min-width: max-content;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.lesson-code-block .token.keyword {
+  color: oklch(0.57 0.17 260);
+  font-weight: 600;
+}
+
+.lesson-code-block .token.string {
+  color: oklch(0.62 0.14 150);
+}
+
+.lesson-code-block .token.punctuation {
+  color: oklch(0.52 0.03 260);
+}
+
+@media (min-width: 768px) {
+  .lesson-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}

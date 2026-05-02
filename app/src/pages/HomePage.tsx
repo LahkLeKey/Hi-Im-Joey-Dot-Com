@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -148,6 +149,55 @@ export default function HomePage() {
                                     </CardDescription>
                                 </div>
                             </div>
+                        </CardContent>
+                    </Card>
+                </section>
+
+                <section aria-labelledby="blog-link-heading">
+                    <Card className="border-none shadow-sm ring-1 ring-foreground/10">
+                        <CardHeader className="gap-3">
+                            <Badge variant="secondary" className="w-fit">
+                                New updates
+                            </Badge>
+                            <CardTitle id="blog-link-heading" className="text-2xl leading-tight">
+                                Read my blog posts
+                            </CardTitle>
+                            <CardDescription className="text-base leading-7 text-foreground/80">
+                                I write short updates about what I learn while building this site.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="pt-1">
+                            <Link
+                                to="/blog"
+                                className="inline-flex h-8 w-full items-center justify-center rounded-lg bg-primary px-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
+                            >
+                                Go to the blog
+                            </Link>
+                        </CardContent>
+                    </Card>
+                </section>
+
+                <section aria-labelledby="learn-link-heading">
+                    <Card className="border-none shadow-sm ring-1 ring-foreground/10">
+                        <CardHeader className="gap-3">
+                            <Badge variant="secondary" className="w-fit">
+                                Learn React
+                            </Badge>
+                            <CardTitle id="learn-link-heading" className="text-2xl leading-tight">
+                                Try the interactive lesson
+                            </CardTitle>
+                            <CardDescription className="text-base leading-7 text-foreground/80">
+                                Open a step-by-step lesson that explains component, state, and
+                                re-render behavior with a live Badge toggle.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="pt-1">
+                            <Link
+                                to="/learn"
+                                className="inline-flex h-8 w-full items-center justify-center rounded-lg bg-primary px-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:w-auto"
+                            >
+                                Go to interactive lesson
+                            </Link>
                         </CardContent>
                     </Card>
                 </section>
