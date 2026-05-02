@@ -4,21 +4,6 @@ interface CodeSnippetProps {
     snippet: LessonCodeSnippet;
 }
 
-function tokenize(code: string): string {
-    const escaped = code
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-
-    return escaped
-        .replace(
-            /(\b(?:const|let|return|import|from|export|function|useState)\b)/g,
-            '<span class="token keyword">$1</span>',
-        )
-        .replace(/("[^"]*")/g, '<span class="token string">$1</span>')
-        .replace(/(\{|\}|\(|\)|\[|\])/g, '<span class="token punctuation">$1</span>');
-}
-
 export default function CodeSnippet({ snippet }: CodeSnippetProps) {
     return (
         <section aria-labelledby="code-snippet-title" className="space-y-3">
@@ -32,7 +17,7 @@ export default function CodeSnippet({ snippet }: CodeSnippetProps) {
                 </div>
             </div>
             <pre className="lesson-code-block" aria-label={`${snippet.fileName} code snippet`}>
-                <code dangerouslySetInnerHTML={{ __html: tokenize(snippet.code) }} />
+                <code>{snippet.code}</code>
             </pre>
         </section>
     );
