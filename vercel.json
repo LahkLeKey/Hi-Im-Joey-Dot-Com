@@ -3,5 +3,11 @@
     "framework": "vite",
     "installCommand": "cd app && bun install",
     "buildCommand": "cd app && bun run build",
-    "outputDirectory": "app/dist"
+    "outputDirectory": "app/dist",
+    "rewrites": [
+        {
+            "source": "/((?!.*\\..*).*)",
+            "destination": "/index.html"
+        }
+    ]
 }
