@@ -34,3 +34,7 @@
 - Validation completed against the written spec on 2026-05-02.
 - The spec stays intentionally limited to one in-page starter lesson with one interaction loop and one nearby explanation/code example.
 - No clarification blockers remain before `/speckit.plan`.
+- Implementation evidence recorded on 2026-05-02:
+- `bun run test` in `app/`: 9 passed, 0 failed.
+- `bun run build` in `app/`: TypeScript and Vite production build passed.
+- Deployment readiness verified against existing static Vercel workflow (`app/dist` output, no new runtime secrets/services).
